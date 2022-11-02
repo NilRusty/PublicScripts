@@ -1,1 +1,276 @@
-return(function(...)local T={"nlpMxedh5TZ=","nHNGxDz=","QHufClkax2SwxTxI";"1Qdh5B+=","rQudrlu1Bq1Gdk1MB2+=","B2RzW24kZ9==";"1HkSX6d0AtZ7nl10ZT1GWULrAtkoWtn=","XDi0dedadepiA1M4CwQ=","BTNfxn==","vtutv1uzxiM6dzfJdkZ=";"Q21nB2ISCkFqd616";"2TwTZiddQ1xACQpOr7==";"Xk1KBlucABdDdqA9xF==","v6AYdBiq5qxS5aQb","vQp0r2fwBQYlrHdgC9==","dTkGxixhZeuSnHMh56n=";"BeLc";"nHMM5TWkxF==","C6NI56Rlx21G","QT1f5ldkde1GAldh5HY=","Q64MAH1fx2bS";"uiMYBapqZkrws6wS";"d61TAt1IWF==","n2dz16RexH4k","xHNfxn==";"xlA4X2WTXHhBskkhxF==";"xH1SxH1GW7==","W6RGW2w3xt+=";"W6N356Q=","QT1M5iwo5T1b";"twRIx2Y=","Q64Ms210Z9==";"W6NqX9==","WikcX1xdWz1gnT+lnTQ=";"QHNHx1uSAtdq";"nTNqxQRl5T1z";"nt1S50Lr5HNz+i4Ms2RwWF==","QDpk52kw5QRG5Dz=";"Blph5Hba5HbTX2Z=";"ZkMoxakC2DWuxqMG","B6RcA24n56Nbxt+=";"x61IAtz=","C2bhWF==","B2NVx1dMA7==","nSx0A2wkZ9==";"nHRG5T1cWF==","B2NVx1Wh5TdoW9==","QT1956kcAtdkxNuS5lpMxHQ=","QT13XtpSXF==","twReA9==";"dD1fZF==","dH1SQDph52N0s1LMZedadepM52Q=";"1TNIW2Q=";"C2bSZTRN5TN3561z";"Q6RqXtdh5HY=";"C2uo57==","xNFY1Sk3A1M4Bth4uk+=";"QDpkZldhxHQ7QT105H4I","Akp6v6bvCDdrAT1V";"5iMq1wxxxDpg1Bdarqi=","ATuBnT9YdibjZe1dCBZ=","CTYwnT4edNxzW1i4s7==","vNpdCQdfr2xhQwxSuHi=";"QDpkZldhxHQ=";"B6RMxULrAtkoWtn=";"B61Mx610ATRMZTdq";"ABuO1cun5QwUCiWS";"nt1S59==","n2dzB6N3x29=";"nHMMZTNcW610","Ctdk5tr=","nHNI56pMAHI=","vQbkXNhUWHMnQii9";"C2bSxtpTA2uk";"BlxkZT4Mstr=";"OCLNWT1GWUFf";"B6kTx1uSAtpS";"QT1h5TuMZTbMW6Q=","5T1l";"ukpv2t1InkLKXkkoQzQ=","BcWz2NWTCz7wxBkV","QDph52N0s1LMZen=";"2BxG5czqv6bH2Dud","Q64Ms210dl1h","1TkqX2pIxn==","C6kzx1L0x2whW2S=","x6fDxlKHZiMIXzNHZTQ=";"QT1f5ldkdtxk5en=","WHkSX6d0AtWpW61f";"WHR0Xlu9A2uk";"dBNT1ihiZDLDXwMBWaF=";"rezwxlN0CtMOXDuLCSA=","C2bH5HfkQH10WT10";"QHNHxQuo5Txhx9==","Z64MAH1pW61f","Ctur5HNzx2n=","dH1SnHMh56d0x2Y=","OCLix2xMW24S+US=","Ba1Sx6pgCSY0xThX","X2bqxtpS";"WHNhWF==","2DNvseWX1txNxHkt5Nn=";"1HNhWixoZzuKX24z";"At1S5wpkATk0W67=","twRh5TdksF==";"nHRf5t1GX2uMW6R0","QT1M5i4hxTQ=";"nHRGxTkedTRIx610","W2b9A2uV","ZTpYAtuqxtdhxaKoOqnSvarquaQbvB7=";"B6Nb5l1S";"nt1S50LCx2phZedK","QH1S+i4Ms2RwWF==";"56RMxDuSZTkGx9==";"QT105H4I","AH4kAt+=";"At1S5S4oA2dBxtdrAtkoWtn=","CDdSZiWkWF==";"B6RMx61z";"XDdSZDrJO0R0AtZGxHkSXD13WtukZTuo5edk5enGAHRfOluK561YWHN0xCRmZTko53RfA2kGOluoWtpcxn==";"n2dzne1SW6RG";"sB70WHphuaZlQHZb2BA=";"nH4hx2bSB6RMx61z","d61qWDposn==","BQiJ2UL3sCLCWtuSsCrbuaA0","At1S5SuM5Tdb","CD1fA2boX2dC5HRSQ6N0WF==";"nHNGxDz7At1S5HxMZTS=","dH1SQH10WTkcxn==";"B210AHMM5en="}local function x(x)return T[x-20245]end for x,I in ipairs({{1;130},{1,42};{43;130}})do while I[1]<I[2]do T[I[1]],T[I[2]],I[1],I[2]=T[I[2]],T[I[1]],I[1]+1,I[2]-1 end end do local x=string.char local I=table.insert local b=math.floor local u=string.sub local A={k=37;S=52,o=47;G=46,h=41;q=51,["6"]=6;D=7;l=55,r=12,E=60,["5"]=27;["4"]=49,e=39,s=30;I=44,d=17;Z=28;["1"]=21;v=14,["9"]=48;C=18,m=15;b=57;O=11,n=16;["/"]=31;x=25,y=62;c=35,j=42;U=2;L=1;K=40;["2"]=22,Y=56;["0"]=50;P=63;["+"]=8,N=5,["3"]=34,z=36;["7"]=32;f=45;i=4;u=13,M=33;V=43,a=3;A=24,Q=20;H=54;t=23;X=26;B=19,p=9,T=38;g=10,w=53,W=29;J=58;R=61,F=0,["8"]=59}local i=table.concat local D=string.len local a=type local p=T for T=1,#p,1 do local C=p[T]if a(C)=="string"then local a=D(C)local E={}local r=1 local Y=0 local V=0 while r<=a do local T=u(C,r,r)local i=A[T]if i then Y=Y+i*64^(3-V)V=V+1 if V==4 then V=0 local T=b(Y/65536)local u=b((Y%65536)/256)local A=Y%256 I(E,x(T,u,A))Y=0 end elseif T=="="then I(E,x(b(Y/65536)))if r>=a or u(C,r+1,r+1)~="="then I(E,x(b((Y%65536)/256)))end break end r=r+1 end p[T]=i(E)end end end return(function(T,b,u,A,i,D,a,E,V,Y,I,w,J,g,s,p,K,z,C,R,r,q,M)p,M,z,R,E,J,r,w,V,g,I,Y,C,K,q,s={},function(T)C[T]=C[T]-1 if 0==C[T]then C[T],p[T]=nil,nil end end,function(T,x)local b=Y(x)local u=function(u)return I(T,{u},x,b)end return u end,function(T,x)local b=Y(x)local u=function(...)return I(T,{...},x,b)end return u end,function()r=1+r C[r]=1 return r end,function(T,x)local b=Y(x)local u=function(u,A)return I(T,{u;A},x,b)end return u end,0,function(T,x)local b=Y(x)local u=function()return I(T,{},x,b)end return u end,function(T)local x,I=1,T[1]while I do C[I],x=C[I]-1,x+1 if 0==C[I]then C[I],p[I]=nil,nil end I=T[x]end end,function(T,x)local b=Y(x)local u=function(u,A,i,D,a,p)return I(T,{u;A,i,D;a;p},x,b)end return u end,function(I,u,A,i)local W,o,R,L,e,C,Q,F,f,n,v,d,H,m,l,Y,j,G,h,N,y,V,r,Z,U,O,c,B,a,P,S while I do if I<8532195 then if I<3526118 then if I<1755812 then if I<1192907 then if I<960598 then if I<900254 then if I<109591 then C=u a=x(20312)I=T[a]a=x(20253)a=I[a]a=a(I)I=10003417 else r=x(20247)a=T[r]r=x(20338)I=a[r]Y=x(20254)r=x(20289)a=x(20303)a=I[a]a=a(I,r)C=a Y=C[Y]Y={Y(C)}I=Y[1]a=Y[2]r=Y[3]Y=I I=14456350 V=a end else I=p[A[1]]V=p[A[2]]R=x(20361)Y=V[R]V=x(20362)r=Y[V]Y=x(20287)C=r[Y]c=x(20361)Y=p[A[3]]P=p[A[2]]e=P[c]P=x(20362)H=e[P]e=x(20287)R=H[e]V=Y(R)r=not V a=I(C,r)a={}I=T[x(20295)]end else if I<1101249 then if I<1053703 then C=u[1]I=C a=x(20283)T[a]=I a=p[A[1]]r=a()I=T[x(20298)]C=nil a={}else a=x(20303)I=p[A[1]]C=x(20323)a=I[a]a=a(I,C)C=a I=not C I=I and 7374825 or 9106882 end else a=x(20314)G=E()I=T[a]Z=E()a=I()e=x(20293)r=false I=x(20283)P=x(20293)B=x(20341)a[I]=r r=false a=x(20314)I=T[a]a=I()I=x(20274)U=E()a[I]=r a=x(20314)L=x(20326)I=T[a]V=E()r=false a=I()I=x(20261)a[I]=r a=x(20312)r=x(20319)I=T[a]a=x(20286)h=E()a=I[a]d=E()a=a(I,r)j=E()r=a R=x(20371)Y=x(20335)a=x(20312)I=T[a]a=x(20286)a=I[a]a=a(I,Y)Y=a c=E()y=x(20275)a=x(20328)I=r[a]a=x(20260)p[V]=I F=E()I=p[V]a=I[a]a=a(I,R)R=E()p[R]=a W=E()H=Y[e]e=x(20263)a=H[e]H=x(20307)o=x(20251)f=x(20322)I=a[H]H=E()p[H]=I e=Y[P]n=E()P=x(20263)a=e[P]e=x(20375)I=a[e]e=I I=q(11239052,{V})P=I I=P()I=q(1065043,{V})p[c]=I I=z(15276337,{c})p[F]=I I={}p[n]=I I=K(13430999,{n,F})p[G]=I I=J(4037875,{H,n})p[d]=I I=z(2467497,{H;F})p[U]=I I=q(1660244,{H})p[W]=I S=E()I=g(13590072,{})p[Z]=I I=q(13441294,{})p[j]=I I=J(7453637,{V})p[h]=I I=false p[S]=I m=p[V]e=nil l=m[f]m=x(20264)a=l[m]l=x(20305)v=true I=a[l]l=J(5170957,{S;F,d})O=x(20265)a=x(20333)P=nil a=I[a]a=a(I,l)f=x(20322)m=p[V]l=m[f]m=x(20317)a=l[m]l=x(20305)I=a[l]l=s(10573390,{V;W})a=x(20333)a=I[a]a=a(I,l)Q=true a=x(20271)f=x(20277)I=T[a]N=false m=x(20312)l=T[m]y=l[y]m={y(l,f)}a=I(b(m))I=a()l=I H=M(H)I=x(20334)f=x(20282)m=x(20296)y=x(20373)I=l[I]a={[m]=f;[y]=v;[o]=Q,[O]=L;[B]=N}Q=x(20325)v=x(20343)y=x(20355)f=x(20296)I=I(l,a)o=x(20267)O=false m=I B=false I=x(20331)I=m[I]a={[f]=y,[v]=o,[Q]=O}I=I(m,a)f=I o=x(20343)L=false Q=x(20267)v=x(20268)O=x(20325)y=x(20296)a={[y]=v;[o]=Q;[O]=L}I=x(20331)S=M(S)N=K(16596755,{W})I=m[I]Q=x(20343)o=x(20304)I=I(m,a)O=x(20267)v=x(20296)y=I L=x(20325)I=x(20331)I=m[I]a={[v]=o;[Q]=O;[L]=B}I=I(m,a)v=I Q=x(20270)o=x(20296)L=z(9314889,{G})O=x(20359)V=M(V)I=x(20278)a={[o]=Q,[O]=L}L=K(6832105,{W})Q=x(20336)I=y[I]o=x(20296)Y=nil I=I(y,a)O=x(20359)I=x(20278)I=y[I]a={[o]=Q;[O]=L}o=x(20296)Q=x(20352)O=x(20359)I=I(y,a)G=M(G)n=M(n)L=K(13119416,{d})a={[o]=Q,[O]=L}I=x(20278)I=y[I]I=I(y,a)Q=x(20294)I=x(20278)I=y[I]O=x(20359)B=x(20359)o=x(20296)L=z(1235434,{U})a={[o]=Q;[O]=L}o=x(20296)r=nil I=I(y,a)F=M(F)L=false O=x(20310)I=x(20311)Q=x(20269)I=f[I]a={[o]=Q,[O]=L,[B]=N}Q=x(20324)o=x(20296)N=s(5530604,{d})B=x(20359)I=I(f,a)O=x(20310)L=false a={[o]=Q,[O]=L,[B]=N}I=x(20311)B=x(20359)I=f[I]I=I(f,a)I=x(20356)I=f[I]o=x(20296)a=x(20363)N=z(1047519,{h})I=I(f,a)L=false Q=x(20285)O=x(20310)a={[o]=Q,[O]=L,[B]=N}o=x(20296)Q=x(20287)I=x(20311)y=nil I=f[I]L=J(954036,{Z,R;j})I=I(f,a)I=x(20356)I=v[I]O=x(20359)a=x(20255)I=I(v,a)I=x(20278)a={[o]=Q,[O]=L}o=x(20296)Q=x(20288)h=M(h)I=v[I]L=w(5967879,{Z,R,j})O=x(20359)c=M(c)I=I(v,a)f=nil a={[o]=Q;[O]=L}O=x(20359)o=x(20296)I=x(20278)U=M(U)I=v[I]L=q(4669794,{Z;R,j})I=I(v,a)I=x(20278)Q=x(20353)I=v[I]a={[o]=Q,[O]=L}L=K(3701337,{Z;R,j})I=I(v,a)Q=x(20351)O=x(20359)o=x(20296)a={[o]=Q,[O]=L}I=x(20278)o=x(20296)W=M(W)Q=x(20345)L=J(3002547,{Z;R,j})d=M(d)O=x(20359)I=v[I]I=I(v,a)I=x(20278)I=v[I]a={[o]=Q;[O]=L}Q=x(20306)I=I(v,a)m=nil o=x(20296)I=x(20356)O=x(20359)a=x(20363)L=q(7338163,{Z;R,j})I=v[I]I=I(v,a)a={[o]=Q;[O]=L}Z=M(Z)j=M(j)I=x(20278)I=v[I]R=M(R)I=I(v,a)I=x(20330)v=nil a={}I=l[I]I=I(l)l=nil I=T[x(20302)]end end else if I<1570559 then if I<1493500 then if I<1278547 then I=p[A[1]]a=I()a={}I=T[x(20344)]else V,H=r(Y,V)I=V and 11548019 or 16468004 end else a=false I=x(20372)C[I]=a I=8491547 end else if I<1658619 then R=r P=p[H]c=x(20369)e=P[c]I=e and 2528839 or 11944406 else I=p[A[1]]C=x(20365)a=x(20250)a=I[a]a=a(I,C)I=T[x(20327)]a={}end end end else if I<2513451 then if I<2435495 then if I<2188534 then if I<1870234 then I=15682200 V=.3 Y=x(20258)r=T[Y]Y=r(V)else I=3502123 end else Y=p[A[2]]V=Y()Y=0 r=#V a=r<=Y I=a and 11795353 or 5157606 end else if I<2479912 then r=x(20246)I=p[A[1]]Y=p[A[2]]C=x(20308)a=x(20250)V={Y()}a=I[a]a=a(I,C,r,b(V))a={}I=T[x(20354)]else I=T[x(20346)]a={}end end else if I<2981833 then if I<2587546 then if I<2524676 then C=p[A[1]]r=x(20303)Y=x(20276)r=C[r]r=r(C,Y)I=r and 15123314 or 15701861 a=r else G=p[A[1]]P=x(20342)d=x(20357)n=G[d]G=x(20284)I=11944406 F=n[G]n=x(20342)c=F[n]F=x(20320)e[P]=c c=T[F]F=x(20329)P=c[F]F=5 n=J(8687301,{H})c=P(F,n)end else I=a and 12927354 or 6769876 end else if I<3448693 then c=x(20361)I=p[A[1]]V=p[A[2]]R=x(20361)Y=V[R]V=x(20362)r=Y[V]Y=x(20272)C=r[Y]Y=p[A[3]]P=p[A[2]]e=P[c]P=x(20362)H=e[P]e=x(20272)R=H[e]V=Y(R)r=not V a=I(C,r)I=T[x(20292)]a={}else I=T[x(20349)]a={}end end end end else if I<5923708 then if I<4585308 then if I<3773325 then if I<3724711 then if I<3704863 then I=p[A[1]]R=x(20361)V=p[A[2]]Y=V[R]V=x(20362)r=Y[V]Y=x(20351)C=r[Y]Y=p[A[3]]c=x(20361)P=p[A[2]]e=P[c]P=x(20362)H=e[P]e=x(20351)R=H[e]V=Y(R)r=not V a=I(C,r)I=T[x(20370)]a={}else I=1776048 a=true C=a end else Y=x(20320)r=T[Y]Y=x(20258)C=r[Y]I=10546785 r=C()a=r end else if I<4280599 then r=x(20252)C=x(20308)I=p[A[1]]R=x(20358)a=x(20250)V=p[A[2]]Y=V[R]R=p[A[2]]H=x(20332)V=R[H]a=I[a]a=a(I,C,r,Y,V)I=T[x(20299)]a={}else I=6769876 C=nil end end else if I<5291357 then if I<5160929 then if I<5096852 then I=p[A[1]]V=p[A[2]]R=x(20361)Y=V[R]V=x(20362)r=Y[V]Y=x(20353)C=r[Y]Y=p[A[3]]P=p[A[2]]c=x(20361)e=P[c]P=x(20362)H=e[P]e=x(20353)R=H[e]V=Y(R)r=not V a=I(C,r)a={}I=T[x(20249)]else Y=p[A[2]]V=Y()Y=1 r=#V a=r>Y I=a and 3705732 or 1776048 end else a=p[A[1]]I=not a I=I and 15955344 or 9070569 end else if I<5493689 then Y=x(20320)r=T[Y]I=11584461 Y=x(20258)a=r[Y]Y=.75 r=a(Y)a=p[A[1]]r=a()else a=x(20274)C=u[1]I=C T[a]=I I=C and 5488837 or 11584461 end end end else if I<7401904 then if I<7016399 then if I<6796613 then if I<6340781 then I=p[A[1]]V=p[A[2]]R=x(20361)Y=V[R]V=x(20362)r=Y[V]Y=x(20288)C=r[Y]Y=p[A[3]]P=p[A[2]]c=x(20361)e=P[c]P=x(20362)H=e[P]e=x(20288)R=H[e]V=Y(R)r=not V a=I(C,r)a={}I=T[x(20256)]else a={}I=T[x(20348)]end else I=p[A[1]]a=I()a={}I=T[x(20347)]end else if I<7355212 then I=p[A[1]]R=x(20361)V=p[A[2]]Y=V[R]V=x(20362)r=Y[V]Y=x(20306)C=r[Y]Y=p[A[3]]c=x(20361)P=p[A[2]]e=P[c]P=x(20362)H=e[P]e=x(20306)R=H[e]V=Y(R)r=not V a=I(C,r)a={}I=T[x(20350)]else I=T[x(20301)]a={}end end else if I<8327004 then if I<8088702 then if I<7691428 then I=10362624 else a=x(20358)I=C[a]r=x(20254)r=I[r]a={r(I)}a={b(a)}I=T[x(20368)]end else I=15682200 a=false C=a end else if I<8528616 then a={}I=T[x(20300)]C=nil r=nil else I=false a={I}I=T[x(20321)]end end end end end else if I<11865452 then if I<10566752 then if I<9740533 then if I<9054360 then if I<8810830 then if I<8580325 then C=nil I=9840722 else a=x(20281)I=p[A[1]]a=I[a]a=a(I)a={}I=T[x(20248)]end else Y=x(20320)r=T[Y]Y=x(20258)C=r[Y]r=C()I=2967767 a=r end else if I<9123013 then if I<9093431 then a={}I=T[x(20259)]else a=x(20340)I=C[a]a={I}I=T[x(20313)]end else I=p[A[1]]a=I()I=T[x(20290)]a={}end end else if I<10237922 then if I<9992285 then if I<9975170 then C=false p[A[1]]=C I=9070569 else I=p[A[2]]a=I()I=11170356 end else r=x(20320)a=T[r]r=x(20258)I=a[r]a=I()I=11324835 end else if I<10475568 then r=x(20283)C=T[r]I=C and 8950859 or 2967767 a=C else I=a and 2521568 or 3502123 end end end else if I<11326753 then if I<11211525 then if I<10970125 then if I<10667067 then a=x(20261)I=T[a]I=I and 12636628 or 12560709 else C=nil I=10362624 end else I=12560709 end else if I<11306936 then I=15878161 else a=x(20312)I=T[a]a=x(20253)a=I[a]a=a(I)I=a and 1183350 or 10003417 end end else if I<11721702 then if I<11548721 then if I<11402115 then I=15878161 else R=V c=x(20316)P=T[c]G=x(20296)c=x(20257)n=x(20358)e=P[c]I=1390353 F=p[A[1]]c=F[n]R=nil n=H[G]F={n}P=e(c,F)c=x(20316)P=T[c]c=x(20257)e=P[c]n=x(20332)F=p[A[1]]c=F[n]n=x(20339)n=H[n]F={n(H)}P=e(c,b(F))H=nil end else C=nil I=T[x(20374)]a={}end else if I<11734701 then a=true V=x(20291)H=.5 I=x(20372)C[I]=a I=x(20342)R=1 e=1 Y=T[V]V=x(20366)a=Y[V]V=.5 Y=a(V,R,H,e)C[I]=Y I=8491547 else I=1776048 a=p[A[3]]r=a()end end end end else if I<14008601 then if I<13109994 then if I<12598312 then if I<12468159 then if I<12141995 then I=14456350 H=M(H)e=nil R=nil else a=p[A[1]]r=a()I=16021166 end else I=T[x(20360)]a={}end else if I<12839146 then H=x(20322)C=x(20315)a=T[C]R=p[A[1]]V=R[H]R=x(20317)P=x(20322)Y=V[R]V=x(20340)r=Y[V]Y=x(20315)C=a(r)r=T[Y]e=p[A[1]]H=e[P]e=x(20364)R=H[e]H=x(20340)V=R[H]Y=r(V)r=2 a=Y*r I=C>=a I=I and 9978265 or 11170356 else C=x(20283)a=T[C]I=not a I=I and 4581076 or 163641 end end else if I<13443263 then if I<13432971 then if I<13404905 then I=p[A[1]]a=I()I=T[x(20309)]a={}else C=x(20316)a=T[C]C=x(20273)I=a[C]C=p[A[1]]a=I(C)a=x(20358)C={}I=p[A[1]]I[a]=C a=x(20332)I=p[A[1]]C={}I[a]=C I=p[A[2]]a=I()I=nil C=a Y=I r=C I=1390353 a=nil V=a end else C=u[1]a=x(20372)I=C[a]I=I and 13464277 or 8532152 end else if I<13581143 then I=true a={I}I=T[x(20297)]else r=u[2]C=u[1]I=r and 11721762 or 1560050 end end end else if I<15746431 then if I<15527301 then if I<15200646 then if I<14463795 then r,H=Y(V,r)I=r and 1656198 or 10672499 else Y=x(20280)C=p[A[1]]r=x(20303)r=C[r]I=15701861 r=r(C,Y)a=r end else I=p[A[1]]a=I()C=a I=not C I=I and 2510960 or 7709464 end else if I<15697788 then r=true a=C~=r I=a and 2234767 or 8532235 else I=a and 2065947 or 11327904 end end else if I<16089448 then if I<15959979 then if I<15914809 then C=true a=C I=C and 3734190 or 10546785 else I=true r=.1 p[A[1]]=I C=x(20258)a=T[C]C=a(r)C=x(20274)a=T[C]I=a and 8321209 or 9840722 end else I=T[x(20279)]C=nil a={}end else if I<16548347 then I=T[x(20367)]C=nil a={}else C=u[1]a=x(20261)I=C T[a]=I I=C and 12389951 or 16021166 end end end end end end end I=#i return b(a)end,function(T)for x=1,#T,1 do C[T[x]]=C[T[x]]+1 end if u then local I=u(true)local b=i(I)b[x(20262)],b[x(20337)],b[x(20318)]=T,V,function()return 1848551 end return I else return A({},{[x(20337)]=V;[x(20262)]=T,[x(20318)]=function()return 1848551 end})end end,{},function(T,x)local b=Y(x)local u=function(u,A,i)return I(T,{u,A,i},x,b)end return u end,function(T,x)local b=Y(x)local u=function(u,A,i,D,a)return I(T,{u;A;i;D;a},x,b)end return u end,function(T,x)local b=Y(x)local u=function(u,A,i,D)return I(T,{u;A,i,D},x,b)end return u end return(R(64395,{}))(b(a))end)(getfenv and getfenv()or _ENV,unpack or table[x(20266)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+repeat task.wait() until game:IsLoaded()
+
+getgenv().autoCandy = false
+getgenv().autoLoadSetLayout = false
+getgenv().autoRebirth = false
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local localPlayer = Players.LocalPlayer
+local playerGui = localPlayer:WaitForChild("PlayerGui")
+
+local mainRemoteFunction = ReplicatedStorage.Modules.Communicator.RemoteFunction
+local mainRemoteEvent = ReplicatedStorage.Modules.Communicator.RemoteEvent
+
+--// Main
+local function ensureTycoonLoaded()
+	while true and task.wait() do
+		if localPlayer:FindFirstChild("Loaded") and localPlayer:FindFirstChild("ClientLoaded") then
+			break
+		end
+	end
+end
+ensureTycoonLoaded()
+
+local function getBase()
+	local baseOwned = localPlayer:FindFirstChild("BaseOwned")
+	if not baseOwned then
+		return
+	end
+
+	return baseOwned.Value
+end
+
+local function getLayoutItems()
+	local base = getBase()
+	if not base then
+		return
+	end
+
+	return base.Items:GetChildren()
+end
+
+
+local setLayoutData = {}
+local function setCurrentLayout()
+	table.clear(setLayoutData)
+
+	setLayoutData.Items = {}
+	setLayoutData.CFrames = {}
+
+	local items = getLayoutItems()
+
+	for _, item in items do
+		table.insert(setLayoutData.Items, {item.Name})
+		table.insert(setLayoutData.CFrames, item:GetPrimaryPartCFrame())
+	end
+end
+
+local function loadSetLayout()
+	mainRemoteFunction:InvokeServer("Placement", "placeItem", setLayoutData.Items, setLayoutData.CFrames)
+end
+
+local function withdrawCurrentLayout()
+	mainRemoteFunction:InvokeServer("Placement", "withdrawItem", getLayoutItems())
+end
+
+local function rebirth()
+	mainRemoteFunction:InvokeServer("Reincarnate")
+end
+
+local function setFrameVisible(frame, visible)
+	if visible then
+		frame.Visible = true
+		frame.Position = UDim2.new(0.5, 1, 0.5, 1)
+	else
+		frame.Visible = false
+	end
+end
+
+local function isFrameVisible(frame)
+	if frame.Visible then
+		return true
+	end
+	return false
+end
+
+local function candyAutofarm()
+	while autoCandy and task.wait() do
+		if not autoCandy then break end
+
+		local candyFolder = workspace.Dump:FindFirstChild("Candy")
+
+		for _, candy in candyFolder:GetChildren() do
+			local primary = candy.PrimaryPart
+			if primary then
+				primary.Position = localPlayer.Character.HumanoidRootPart.Position
+				task.delay(5, function()
+					candy:Destroy()
+				end)
+			end
+		end
+	end
+end
+
+local debounce = false
+localPlayer.SaveStats.RealLife.Changed:Connect(function()
+    if not debounce then
+        debounce = true
+        wait(0.1)
+        if autoLoadSetLayout then
+            local loaded = false
+            while loaded ~= true do
+                if #getLayoutItems() <= 0 then
+                	loadSetLayout()
+                elseif #getLayoutItems() > 1 then
+                    loaded = true
+                end
+                wait(0.3)
+            end
+        end
+        debounce = false
+    end
+end)
+
+localPlayer.SaveStats.RealMoney.Changed:Connect(function()
+	if autoRebirth then
+		if tonumber(localPlayer.SaveStats.RealMoney.Value) >= tonumber(localPlayer.SaveStats.LifeStart.Value) * 2 then
+			rebirth()
+		end
+	end
+end)
+
+--// UI
+local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local MainWindow = Orion:MakeWindow({
+	Name = "MA:X by Rusty#9462",
+	HidePremium = true,
+	SaveConfig = true,
+	ConfigFolder = "OrionConfig",
+	IntroEnabled = false,
+})
+
+local AutoTab = MainWindow:MakeTab({
+	Name = "Auto",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local LayoutTab = MainWindow:MakeTab({
+	Name = "Layout",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local NpcTab = MainWindow:MakeTab({
+	Name = "Npc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+LayoutTab:AddButton({
+	Name = "Set Layout",
+	Callback = function()
+		setCurrentLayout()
+  	end
+})
+
+LayoutTab:AddButton({
+	Name = "Rebirth",
+	Callback = function()
+		rebirth()
+  	end
+})
+
+LayoutTab:AddButton({
+	Name = "Load Layout",
+	Callback = function()
+		loadSetLayout()
+  	end
+})
+
+LayoutTab:AddButton({
+	Name = "Withdraw Current Layout",
+	Callback = function()
+		withdrawCurrentLayout()
+  	end
+})
+
+AutoTab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(value)
+		autoRebirth = value
+		if value then
+			rebirth()
+		end
+	end
+})
+
+AutoTab:AddToggle({
+	Name = "Auto Load Layout",
+	Default = false,
+	Callback = function(value)
+		autoLoadSetLayout = value
+		if value then
+			task.wait(0.75)
+			loadSetLayout()
+		end
+	end
+})
+
+AutoTab:AddLabel("- Event -")
+AutoTab:AddToggle({
+	Name = "Candy autofarm",
+	Default = false,
+	Callback = function(value)
+		autoCandy = value
+		candyAutofarm()
+	end
+})
+
+NpcTab:AddLabel("- Default -")
+NpcTab:AddButton({
+	Name = "Merchant",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Merchant,
+			not isFrameVisible(playerGui.Interface.Overlays.Merchant)
+		)
+  	end
+})
+NpcTab:AddButton({
+	Name = "Crafting",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Crafting,
+			not isFrameVisible(playerGui.Interface.Overlays.Crafting)
+		)
+  	end
+})
+NpcTab:AddButton({
+	Name = "Leaderboards",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Leaderboards,
+			not isFrameVisible(playerGui.Interface.Overlays.Leaderboards)
+		)
+  	end
+})
+NpcTab:AddButton({
+	Name = "Prestige",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Prestige,
+			not isFrameVisible(playerGui.Interface.Overlays.Prestige)
+		)
+  	end
+})
+NpcTab:AddButton({
+	Name = "Prestige Reroll",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Reroll,
+			not isFrameVisible(playerGui.Interface.Overlays.Reroll)
+		)
+  	end
+})
+
+NpcTab:AddLabel("- Event -")
+NpcTab:AddButton({
+	Name = "Halloween",
+	Callback = function()
+		setFrameVisible(playerGui.Interface.Overlays.Halloween,
+			not isFrameVisible(playerGui.Interface.Overlays.Halloween)
+		)
+  	end
+})
+
+Orion:Init()
