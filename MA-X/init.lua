@@ -3,9 +3,13 @@ repeat task.wait() until game:IsLoaded()
 getgenv().autoCandy = false
 getgenv().autoLoadSetLayout = false
 getgenv().autoRebirth = false
+getgenv().autoQuest = false
+getgenv().autoCrates = false
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local VirtualUser = game:GetService("VirtualUser")
+local TweenService = game:GetService("TweenService")
 
 local localPlayer = Players.LocalPlayer
 local playerGui = localPlayer:WaitForChild("PlayerGui")
@@ -69,6 +73,14 @@ local function rebirth()
 	mainRemoteFunction:InvokeServer("Reincarnate")
 end
 
+local function clearOre()
+	mainRemoteFunction:InvokeServer("Misc", "clearAllOres")
+end
+
+local function completeQuest(questID)
+	mainRemoteFunction:InvokeServer("HalloweenQuest", "ClaimRewards", tostring(questID))
+end
+
 local function setFrameVisible(frame, visible)
 	if visible then
 		frame.Visible = true
@@ -94,10 +106,51 @@ local function candyAutofarm()
 		for _, candy in candyFolder:GetChildren() do
 			local primary = candy.PrimaryPart
 			if primary then
+				primary.Transparency = 1
 				primary.Position = localPlayer.Character.HumanoidRootPart.Position
 				task.delay(5, function()
 					candy:Destroy()
 				end)
+			end
+			task.wait(0.6)
+		end
+	end
+end
+
+local function crateAutoFarm()
+	while autoCrates and task.wait() do
+		if not autoCrates then break end
+
+		local crateFolder = workspace.Game.Crates
+
+		for _, crate in crateFolder:GetChildren() do
+			crate.CanCollide = false
+			crate.Transparency = 1
+
+			local tween = TweenService:Create(crate, TweenInfo.new(0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Position = localPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 12, 0)})
+			tween:Play()
+			tween.Completed:Connect(function()
+				crate.CanCollide = true
+			end)
+			task.wait(0.8)
+
+			task.delay(20, function()
+				crate:Destroy()
+			end)
+		end
+	end
+end
+
+local function questAutofarm()
+	while autoQuest and task.wait(10) do
+		if not autoQuest then break end
+
+		local questData = mainRemoteFunction:InvokeServer("HalloweenQuest", "Get")
+		for questID, data in questData do
+			for name, has in data.Progress do
+				if has >= data.Reqs[name] then
+					completeQuest(questID)
+				end
 			end
 		end
 	end
@@ -131,6 +184,12 @@ localPlayer.SaveStats.RealMoney.Changed:Connect(function()
 	end
 end)
 
+localPlayer.Idled:connect(function()
+   VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+   wait(1)
+   VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
+
 --// UI
 local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -160,6 +219,7 @@ local NpcTab = MainWindow:MakeTab({
 	PremiumOnly = false
 })
 
+LayoutTab:AddLabel("- Layout Setup")
 LayoutTab:AddButton({
 	Name = "Set Layout",
 	Callback = function()
@@ -167,6 +227,7 @@ LayoutTab:AddButton({
   	end
 })
 
+LayoutTab:AddLabel("- Main")
 LayoutTab:AddButton({
 	Name = "Rebirth",
 	Callback = function()
@@ -188,6 +249,14 @@ LayoutTab:AddButton({
   	end
 })
 
+LayoutTab:AddButton({
+	Name = "Clear All Ore",
+	Callback = function()
+		clearOre()
+  	end
+})
+
+AutoTab:AddLabel("- Default")
 AutoTab:AddToggle({
 	Name = "Auto Rebirth",
 	Default = false,
@@ -211,9 +280,18 @@ AutoTab:AddToggle({
 	end
 })
 
-AutoTab:AddLabel("- Event -")
 AutoTab:AddToggle({
-	Name = "Candy autofarm",
+	Name = "Crate Autofarm",
+	Default = false,
+	Callback = function(value)
+		autoCrates = value
+		crateAutoFarm()
+	end
+})
+
+AutoTab:AddLabel("- Event")
+AutoTab:AddToggle({
+	Name = "Candy Autofarm",
 	Default = false,
 	Callback = function(value)
 		autoCandy = value
@@ -221,7 +299,16 @@ AutoTab:AddToggle({
 	end
 })
 
-NpcTab:AddLabel("- Default -")
+AutoTab:AddToggle({
+	Name = "Quest Autofarm",
+	Default = false,
+	Callback = function(value)
+		autoQuest = value
+		questAutofarm()
+	end
+})
+
+NpcTab:AddLabel("- Default")
 NpcTab:AddButton({
 	Name = "Merchant",
 	Callback = function()
@@ -263,7 +350,7 @@ NpcTab:AddButton({
   	end
 })
 
-NpcTab:AddLabel("- Event -")
+NpcTab:AddLabel("- Event")
 NpcTab:AddButton({
 	Name = "Halloween",
 	Callback = function()
