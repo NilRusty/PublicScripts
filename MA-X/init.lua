@@ -1,84 +1,94 @@
-repeat task.wait() until game:IsLoaded()
+--// Mechanical Ascension X Autofarm
+--// Work in progress!!!!
+--// By Rusty#9462
 
-getgenv().autoCandy = false
-getgenv().autoLoadSetLayout = false
+getgenv().autoLoadLayout = false
 getgenv().autoRebirth = false
-getgenv().autoQuest = false
-getgenv().autoCrates = false
+getgenv().autoQuests = false
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local VirtualUser = game:GetService("VirtualUser")
-local TweenService = game:GetService("TweenService")
 
 local localPlayer = Players.LocalPlayer
 local playerGui = localPlayer:WaitForChild("PlayerGui")
 
-local mainRemoteFunction = ReplicatedStorage.Modules.Communicator.RemoteFunction
-local mainRemoteEvent = ReplicatedStorage.Modules.Communicator.RemoteEvent
+local communicator = require(ReplicatedStorage.Modules.Communicator)
 
---// Main
 local function ensureTycoonLoaded()
 	while true and task.wait() do
 		if localPlayer:FindFirstChild("Loaded") and localPlayer:FindFirstChild("ClientLoaded") then
+			task.wait(1)
 			break
 		end
 	end
 end
 ensureTycoonLoaded()
 
-local function getBase()
-	local baseOwned = localPlayer:FindFirstChild("BaseOwned")
-	if not baseOwned then
-		return
-	end
+local playerBase = localPlayer:FindFirstChild("BaseOwned").Value
+local itemsFolder = playerBase.Items
 
-	return baseOwned.Value
+--// Layouts without having to buy blueprints
+local customLayoutData = {
+	[1] = {Items={},ItemCFrames={}},
+	[2] = {Items={},ItemCFrames={}},
+	[3] = {Items={},ItemCFrames={}},
+	[4] = {Items={},ItemCFrames={}},
+	[5] = {Items={},ItemCFrames={}},
+}
+local layoutToLoad = 1
+
+local function setLayoutData(id)
+	local customLayout = customLayoutData[id]
+
+	table.clear(customLayout.Items)
+	table.clear(customLayout.ItemCFrames)
+
+	for _, item in itemsFolder:GetChildren() do
+		table.insert(customLayout.Items, {item.Name})
+		table.insert(customLayout.ItemCFrames, item:GetPrimaryPartCFrame())
+	end
 end
 
-local function getLayoutItems()
-	local base = getBase()
-	if not base then
-		return
-	end
+local function getCurrentLayoutData()
+	local currentLayout = customLayoutData[layoutToLoad]
 
-	return base.Items:GetChildren()
-end
-
-
-local setLayoutData = {}
-local function setCurrentLayout()
-	table.clear(setLayoutData)
-
-	setLayoutData.Items = {}
-	setLayoutData.CFrames = {}
-
-	local items = getLayoutItems()
-
-	for _, item in items do
-		table.insert(setLayoutData.Items, {item.Name})
-		table.insert(setLayoutData.CFrames, item:GetPrimaryPartCFrame())
-	end
+	return currentLayout.Items, currentLayout.ItemCFrames
 end
 
 local function loadSetLayout()
-	mainRemoteFunction:InvokeServer("Placement", "placeItem", setLayoutData.Items, setLayoutData.CFrames)
+	communicator.listenerFunction("Placement"):Invoke("placeItem", getCurrentLayoutData())
 end
 
 local function withdrawCurrentLayout()
-	mainRemoteFunction:InvokeServer("Placement", "withdrawItem", getLayoutItems())
+	communicator.listenerFunction("Placement"):Invoke("withdrawItem", itemsFolder:GetChildren())
 end
 
 local function rebirth()
-	mainRemoteFunction:InvokeServer("Reincarnate")
+	communicator.listenerFunction("Reincarnate"):Invoke()
 end
 
 local function clearOre()
-	mainRemoteFunction:InvokeServer("Misc", "clearAllOres")
+	communicator.listenerFunction("Misc"):Invoke("clearAllOres")
 end
 
 local function completeQuest(questID)
-	mainRemoteFunction:InvokeServer("HalloweenQuest", "ClaimRewards", tostring(questID))
+	communicator.listenerFunction("HalloweenQuest"):Invoke("ClaimRewards", tostring(questID))
+end
+
+local function autofarmQuests()
+	while autoQuests and task.wait(10) do
+		if not autoQuests then break end
+
+		local questData = communicator.listenerFunction("HalloweenQuest"):Invoke("Get")
+		for questID, data in questData do
+			for name, has in data.Progress do
+				if has >= data.Reqs[name] then
+					completeQuest(questID)
+				end
+			end
+		end
+	end
 end
 
 local function setFrameVisible(frame, visible)
@@ -97,76 +107,17 @@ local function isFrameVisible(frame)
 	return false
 end
 
-local function candyAutofarm()
-	while autoCandy and task.wait() do
-		if not autoCandy then break end
-
-		local candyFolder = workspace.Dump:FindFirstChild("Candy")
-
-		for _, candy in candyFolder:GetChildren() do
-			local primary = candy.PrimaryPart
-			if primary then
-				primary.Transparency = 1
-				primary.Position = localPlayer.Character.HumanoidRootPart.Position
-				task.delay(5, function()
-					candy:Destroy()
-				end)
-			end
-			task.wait(0.6)
-		end
-	end
-end
-
-local function crateAutoFarm()
-	while autoCrates and task.wait() do
-		if not autoCrates then break end
-
-		local crateFolder = workspace.Game.Crates
-
-		for _, crate in crateFolder:GetChildren() do
-			crate.CanCollide = false
-			crate.Transparency = 1
-
-			local tween = TweenService:Create(crate, TweenInfo.new(0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0), {Position = localPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 12, 0)})
-			tween:Play()
-			tween.Completed:Connect(function()
-				crate.CanCollide = true
-			end)
-			task.wait(0.8)
-
-			task.delay(20, function()
-				crate:Destroy()
-			end)
-		end
-	end
-end
-
-local function questAutofarm()
-	while autoQuest and task.wait(10) do
-		if not autoQuest then break end
-
-		local questData = mainRemoteFunction:InvokeServer("HalloweenQuest", "Get")
-		for questID, data in questData do
-			for name, has in data.Progress do
-				if has >= data.Reqs[name] then
-					completeQuest(questID)
-				end
-			end
-		end
-	end
-end
-
 local debounce = false
 localPlayer.SaveStats.RealLife.Changed:Connect(function()
     if not debounce then
         debounce = true
         wait(0.1)
-        if autoLoadSetLayout then
+        if autoLoadLayout then
             local loaded = false
             while loaded ~= true do
-                if #getLayoutItems() <= 0 then
+                if #itemsFolder:GetChildren() <= 0 then
                 	loadSetLayout()
-                elseif #getLayoutItems() > 1 then
+                elseif #itemsFolder:GetChildren() > 2 then
                     loaded = true
                 end
                 wait(0.3)
@@ -219,95 +170,79 @@ local NpcTab = MainWindow:MakeTab({
 	PremiumOnly = false
 })
 
-LayoutTab:AddLabel("- Layout Setup")
-LayoutTab:AddButton({
-	Name = "Set Layout",
-	Callback = function()
-		setCurrentLayout()
+--// Auto
+AutoTab:AddLabel("- Default")
+AutoTab:AddToggle({
+	Name = "Auto load set layout",
+	Callback = function(value)
+		autoLoadLayout = value
+		if value then
+			task.wait(0.75)
+			loadSetLayout()
+		end
+  	end
+})
+AutoTab:AddToggle({
+	Name = "Auto rebirth",
+	Callback = function(value)
+		autoRebirth = value
+		if value then
+			rebirth()
+		end
+  	end
+})
+AutoTab:AddToggle({
+	Name = "Auto quests",
+	Callback = function(value)
+		autoQuests = value
+		autofarmQuests()
   	end
 })
 
-LayoutTab:AddLabel("- Main")
+--// Layouts
+LayoutTab:AddLabel("- Default")
+LayoutTab:AddTextbox({
+	Name = "Layout to load",
+	Default = "1",
+	TextDisappear = false,
+	Callback = function(value)
+		layoutToLoad = math.clamp(tonumber(value), 1, 5)
+	end
+})
+LayoutTab:AddDropdown({
+	Name = "Set layout data (set current placed layout to specific num)",
+	Options = {"1", "2", "3", "4", "5"},
+	Callback = function(value)
+		setLayoutData(tonumber(value))
+	end
+})
+LayoutTab:AddLabel("- Misc")
+LayoutTab:AddButton({
+	Name = "Load set layout",
+	Callback = function()
+		loadSetLayout()
+  	end
+})
 LayoutTab:AddButton({
 	Name = "Rebirth",
 	Callback = function()
 		rebirth()
   	end
 })
-
 LayoutTab:AddButton({
-	Name = "Load Layout",
+	Name = "Clear ores",
 	Callback = function()
-		loadSetLayout()
+		clearOre()
   	end
 })
-
 LayoutTab:AddButton({
-	Name = "Withdraw Current Layout",
+	Name = "Withdraw items",
 	Callback = function()
 		withdrawCurrentLayout()
   	end
 })
 
-LayoutTab:AddButton({
-	Name = "Clear All Ore",
-	Callback = function()
-		clearOre()
-  	end
-})
-
-AutoTab:AddLabel("- Default")
-AutoTab:AddToggle({
-	Name = "Auto Rebirth",
-	Default = false,
-	Callback = function(value)
-		autoRebirth = value
-		if value then
-			rebirth()
-		end
-	end
-})
-
-AutoTab:AddToggle({
-	Name = "Auto Load Layout",
-	Default = false,
-	Callback = function(value)
-		autoLoadSetLayout = value
-		if value then
-			task.wait(0.75)
-			loadSetLayout()
-		end
-	end
-})
-
-AutoTab:AddToggle({
-	Name = "Crate Autofarm",
-	Default = false,
-	Callback = function(value)
-		autoCrates = value
-		crateAutoFarm()
-	end
-})
-
-AutoTab:AddLabel("- Event")
-AutoTab:AddToggle({
-	Name = "Candy Autofarm",
-	Default = false,
-	Callback = function(value)
-		autoCandy = value
-		candyAutofarm()
-	end
-})
-
-AutoTab:AddToggle({
-	Name = "Quest Autofarm",
-	Default = false,
-	Callback = function(value)
-		autoQuest = value
-		questAutofarm()
-	end
-})
-
+--// Gui
 NpcTab:AddLabel("- Default")
 NpcTab:AddButton({
 	Name = "Merchant",
@@ -346,16 +281,6 @@ NpcTab:AddButton({
 	Callback = function()
 		setFrameVisible(playerGui.Interface.Overlays.Reroll,
 			not isFrameVisible(playerGui.Interface.Overlays.Reroll)
-		)
-  	end
-})
-
-NpcTab:AddLabel("- Event")
-NpcTab:AddButton({
-	Name = "Halloween",
-	Callback = function()
-		setFrameVisible(playerGui.Interface.Overlays.Halloween,
-			not isFrameVisible(playerGui.Interface.Overlays.Halloween)
 		)
   	end
 })

@@ -1,0 +1,2 @@
+--// Calculate rebirth price and allow custom setting of skips allowed
+--// Have set layouts that auto place and everything
