@@ -12,18 +12,22 @@ local playerGui = localPlayer:WaitForChild("PlayerGui")
 local BEST_CASE = "breakout_case"
 
 local openCase = ReplicatedStorage.Remotes.OpenCase
+local settings = ReplicatedStorage.Remotes.SettingsEvent
 
-local function autoFarm()
+local function autoFarmCrate()
 	while autoFarm and task.wait() do
 		if not autoFarm then break end
 
-		local result = openCase:InvokeServer(BEST_CASE, 1)
-		print(result)
+		openCase:InvokeServer(BEST_CASE, 3)
+		task.delay(1, function()
+			settings:FireServer("SellSkins")
+			settings:FireServer("SellSkinsRed")
+		end)
 	end
 end
 
 --// AnitAfk
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/NilRusty/PublicScripts/main/Util/AnitAfk.lua')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/NilRusty/PublicScripts/main/Util/AntiAfk.lua')))()
 
 --// UI
 local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -46,7 +50,7 @@ AutoTab:AddToggle({
 	Name = "Autofarm";
 	Callback = function(value)
 		autoFarm = value
-		autoFarm()
+		autoFarmCrate()
 	end
 })
 
