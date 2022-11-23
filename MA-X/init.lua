@@ -4,7 +4,6 @@
 
 getgenv().autoLoadLayout = false
 getgenv().autoRebirth = false
-getgenv().autoQuests = false
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -74,21 +73,6 @@ end
 
 local function completeQuest(questID)
 	communicator.listenerFunction("HalloweenQuest"):Invoke("ClaimRewards", tostring(questID))
-end
-
-local function autofarmQuests()
-	while autoQuests and task.wait(10) do
-		if not autoQuests then break end
-
-		local questData = communicator.listenerFunction("HalloweenQuest"):Invoke("Get")
-		for questID, data in questData do
-			for name, has in data.Progress do
-				if has >= data.Reqs[name] then
-					completeQuest(questID)
-				end
-			end
-		end
-	end
 end
 
 local function setFrameVisible(frame, visible)
@@ -191,13 +175,6 @@ AutoTab:AddToggle({
 		end
   	end
 })
-AutoTab:AddToggle({
-	Name = "Auto quests",
-	Callback = function(value)
-		autoQuests = value
-		autofarmQuests()
-  	end
-})
 
 --// Layouts
 LayoutTab:AddLabel("- Default")
@@ -230,15 +207,15 @@ LayoutTab:AddButton({
   	end
 })
 LayoutTab:AddButton({
-	Name = "Clear ores",
-	Callback = function()
-		clearOre()
-  	end
-})
-LayoutTab:AddButton({
 	Name = "Withdraw items",
 	Callback = function()
 		withdrawCurrentLayout()
+  	end
+})
+LayoutTab:AddButton({
+	Name = "Clear ores",
+	Callback = function()
+		clearOre()
   	end
 })
 
