@@ -13,6 +13,7 @@ local BEST_CASE = "breakout_case"
 
 local openCase = ReplicatedStorage.Remotes.OpenCase
 local settings = ReplicatedStorage.Remotes.SettingsEvent
+local buy = ReplicatedStorage.Remotes.BuyBulk
 
 local function autoFarmCrate()
 	while autoFarm and task.wait() do
@@ -22,6 +23,7 @@ local function autoFarmCrate()
 		task.delay(1, function()
 			settings:FireServer("SellSkins")
 			settings:FireServer("SellSkinsRed")
+			buy:FireServer(BEST_CASE, 5)
 		end)
 	end
 end
