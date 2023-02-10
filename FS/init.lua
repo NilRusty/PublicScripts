@@ -3,7 +3,7 @@
 --// By Rusty#9462
 
 getgenv().autoFarmFish = false
-getgenv().autoFarmFishSpeed = 1000
+getgenv().autoFarmFishSpeed = 1
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
@@ -15,7 +15,7 @@ local character = localPlayer.Character
 
 local function isRodEquipped()
 	for _, v in character:GetChildren() do
-		if string.match(v.Name, "rod") then
+		if v:IsA("Tool") then
 			return true
 		end
 	end
@@ -100,34 +100,6 @@ local TpTab = MainWindow:MakeTab({
 	PremiumOnly = false
 })
 
-local ExtraTab = MainWindow:MakeTab({
-	Name = "Extra",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-ExtraTab:AddLabel("- Preformance")
-ExtraTab:AddButton({
-	Name = "Disable effects",
-	Callback = function()
-		task.spawn(function()
-			while task.wait(0.1) do
-				for _, v in Workspace:GetDescendants() do
-					if v:IsA("ParticleEmitter") then
-						v:Destroy()
-					end
-				end
-			end
-		end)
-	end
-})
-ExtraTab:AddButton({
-	Name = "Low shaders mode",
-	Callback = function()
-
-	end
-})
-
 TpTab:AddLabel("- Islands")
 for _, v in Workspace:FindFirstChild("Islands"):GetChildren() do
 	TpTab:AddButton({
@@ -139,6 +111,16 @@ for _, v in Workspace:FindFirstChild("Islands"):GetChildren() do
 end
 
 AutoTab:AddLabel("- Fishing")
+AutoTab:AddTextbox({
+	Name = "Auto speed",
+	Default = autoFarmFishSpeed,
+	TextDisappear = false,
+	Callback = function(value)
+		if typeof(tonumber(value)) == "number" then
+			autoFarmFishSpeed = value
+		end
+	end
+})
 AutoTab:AddToggle({
 	Name = "Auto fish (will lag)",
 	Callback = function(value)
@@ -152,7 +134,8 @@ AutoTab:AddToggle({
 				})
 				return
 			end
-			task.wait(0.25)
+			tp(CFrame.new(3451.04761, 79.3170776, -338.155914))
+			task.wait(0.5)
 			autoFish()
 		end
 		autoFarmFish = value
