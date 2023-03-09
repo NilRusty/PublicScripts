@@ -1,4 +1,4 @@
-getgenv().autofarm = false
+getgenv().autofarm = true
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -10,18 +10,6 @@ local entityPath = workspace.RENDER.ENTITIES
 
 local currentTarget = nil
 local doneTp = false
-
-local function tp(cframe)
-	betterTp(cframe)
-
-	task.spawn(function()
-		while task.wait() do
-			if localPlayer.Character.HumanoidRootPart.CFrame == cframe then
-				break
-			end
-		end
-	end)
-end
 
 task.spawn(function()
 	while autofarm and task.wait() do
@@ -42,10 +30,10 @@ task.spawn(function()
 
 		if currentTarget then
 			if not doneTp then
-				tp(currentTarget.PrimaryPart.CFrame)
+				betterTp(currentTarget.PrimaryPart.CFrame, 200)
 				doneTp = true
 			else
-				
+				game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.1.0-rc.1"].knit.Services.PetsService.__comm__.RE.SwordAttack:FireServer("Enemy", currentTarget.Name)
 			end
 		end
 	end
