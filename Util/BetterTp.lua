@@ -2,10 +2,10 @@ local RunService = game:GetService("RunService");
 local Players = game:GetService("Players");
 local Player = Players.LocalPlayer;
 
-local TeleportSpeed = 50;
+--local TeleportSpeed = 50;
 local NextFrame = RunService.Heartbeat;
 
-return function(Target)
+return function(Target, TeleportSpeed)
     if (typeof(Target) == "Instance" and Target:IsA("BasePart")) then Target = Target.Position; end;
     if (typeof(Target) == "CFrame") then Target = Target.p end;
 
